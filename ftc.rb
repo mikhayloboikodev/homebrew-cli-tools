@@ -6,7 +6,7 @@ class Ftc < Formula
   sha256 "e1c59eb7a3a9bfb7c69c25fca8ddce2d1d372e9ef0fbc3da4a9319e1747af0ed"
 
   def install
-    system "clang", "main.c", "-o", "ftc"
+    system ENV.cc, "main.c", "-o", "ftc"
     bin.install "ftc"
   end
 end
