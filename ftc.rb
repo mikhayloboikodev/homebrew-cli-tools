@@ -6,8 +6,11 @@ class Ftc < Formula
   sha256 "e1c59eb7a3a9bfb7c69c25fca8ddce2d1d372e9ef0fbc3da4a9319e1747af0ed"
 
   def install
+    main_c_path = Dir.glob("**/main.c").first
 
-    cd "CLI-Tool-ftc-cli" if buildpath.join("CLI-Tool-ftc-cli").directory?
+    if main_c_path
+      FileUtils.cp main_c_path, "main.c"
+    end
     
     system "clang", "main.c", "-o", "ftc"
     bin.install "ftc"
