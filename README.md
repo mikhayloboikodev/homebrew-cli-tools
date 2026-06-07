@@ -11,7 +11,7 @@ Follow these simple steps to connect this tap and start using the tools directly
 ### 1. Install Homebrew
 If you don't have Homebrew installed yet, run the following command in your Terminal:
 ```bash
-/bin/bash -c "\$(curl -fsSL https://githubusercontent.com)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ### 2. Add this Tap
